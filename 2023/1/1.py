@@ -26,6 +26,7 @@ def challenge_2():
     num_str = ""
     num_pairs = []
     found_numbers = []
+    numbers_written = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine",]
 
     final_sum = 0
 
@@ -39,51 +40,13 @@ def challenge_2():
                 for i in the_list:
                     num_str = ("{}_" + str(i)).format(str(j))
                     found_numbers.append(num_str)
-        if string.find("one") != -1:
-            the_list = [i for i in range(len(string)) if string.startswith("one", i)]
-            for i in the_list:
-                num_str = "1_" + str(i)
-                found_numbers.append(num_str)
-        if string.find("two") != -1:
-            the_list = [i for i in range(len(string)) if string.startswith("two", i)]
-            for i in the_list:
-                num_str = "2_" + str(i)
-                found_numbers.append(num_str)
-        if string.find("three") != -1:
-            the_list = [i for i in range(len(string)) if string.startswith("three", i)]
-            for i in the_list:
-                num_str = "3_" + str(i)
-                found_numbers.append(num_str)
-        if string.find("four") != -1:
-            the_list = [i for i in range(len(string)) if string.startswith("four", i)]
-            for i in the_list:
-                num_str = "4_" + str(i)
-                found_numbers.append(num_str)
-        if string.find("five") != -1:
-            the_list = [i for i in range(len(string)) if string.startswith("five", i)]
-            for i in the_list:
-                num_str = "5_" + str(i)
-                found_numbers.append(num_str)
-        if string.find("six") != -1:
-            the_list = [i for i in range(len(string)) if string.startswith("six", i)]
-            for i in the_list:
-                num_str = "6_" + str(i)
-                found_numbers.append(num_str)
-        if string.find("seven") != -1:
-            the_list = [i for i in range(len(string)) if string.startswith("seven", i)]
-            for i in the_list:
-                num_str = "7_" + str(i)
-                found_numbers.append(num_str)
-        if string.find("eight") != -1:
-            the_list = [i for i in range(len(string)) if string.startswith("eight", i)]
-            for i in the_list:
-                num_str = "8_" + str(i)
-                found_numbers.append(num_str)
-        if string.find("nine") != -1:
-            the_list = [i for i in range(len(string)) if string.startswith("nine", i)]
-            for i in the_list:
-                num_str = "9_" + str(i)
-                found_numbers.append(num_str)
+        
+        for j in range(len(numbers_written)):
+            if string.find(numbers_written[j]) != -1:
+                the_list = [i for i in range(len(string)) if string.startswith(numbers_written[j], i)]
+                for i in the_list:
+                    num_str = ("{}_" + str(i)).format(str(numbers_written.index(numbers_written[j]) + 1))
+                    found_numbers.append(num_str)
         
         if len(found_numbers) == 1:
             result = int(found_numbers[0][0] + found_numbers[0][0])
