@@ -33,51 +33,12 @@ def challenge_2():
     input_content = file.readlines()
 
     for string in input_content:
-        if string.find("1") != -1:
-            the_list = [i for i in range(len(string)) if string.startswith("1", i)]
-            for i in the_list:
-                num_str = "1_" + str(i)
-                found_numbers.append(num_str)
-        if string.find("2") != -1:
-            the_list = [i for i in range(len(string)) if string.startswith("2", i)]
-            for i in the_list:
-                num_str = "2_" + str(i)
-                found_numbers.append(num_str)
-        if string.find("3") != -1:
-            the_list = [i for i in range(len(string)) if string.startswith("3", i)]
-            for i in the_list:
-                num_str = "3_" + str(i)
-                found_numbers.append(num_str)
-        if string.find("4") != -1:
-            the_list = [i for i in range(len(string)) if string.startswith("4", i)]
-            for i in the_list:
-                num_str = "4_" + str(i)
-                found_numbers.append(num_str)
-        if string.find("5") != -1:
-            the_list = [i for i in range(len(string)) if string.startswith("5", i)]
-            for i in the_list:
-                num_str = "5_" + str(i)
-                found_numbers.append(num_str)
-        if string.find("6") != -1:
-            the_list = [i for i in range(len(string)) if string.startswith("6", i)]
-            for i in the_list:
-                num_str = "6_" + str(i)
-                found_numbers.append(num_str)
-        if string.find("7") != -1:
-            the_list = [i for i in range(len(string)) if string.startswith("7", i)]
-            for i in the_list:
-                num_str = "7_" + str(i)
-                found_numbers.append(num_str)
-        if string.find("8") != -1:
-            the_list = [i for i in range(len(string)) if string.startswith("8", i)]
-            for i in the_list:
-                num_str = "8_" + str(i)
-                found_numbers.append(num_str)
-        if string.find("9") != -1:
-            the_list = [i for i in range(len(string)) if string.startswith("9", i)]
-            for i in the_list:
-                num_str = "9_" + str(i)
-                found_numbers.append(num_str)
+        for j in range(1,10):
+            if string.find(str(j)) != -1:
+                the_list = [i for i in range(len(string)) if string.startswith(str(j), i)]
+                for i in the_list:
+                    num_str = ("{}_" + str(i)).format(str(j))
+                    found_numbers.append(num_str)
         if string.find("one") != -1:
             the_list = [i for i in range(len(string)) if string.startswith("one", i)]
             for i in the_list:
