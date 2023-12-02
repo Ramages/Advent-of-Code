@@ -3,7 +3,7 @@ Enum boolean
   TRUE = not FALSE
 End Enum
 
-Dim AS STRING file_to_open = "C:\Users\George\Desktop\Advent_of_code\6\input.txt"
+Dim AS STRING file_to_open = "C:\Users\Desktop\Advent_of_code\6\input.txt"
 Dim File_Content AS STRING
 Dim Da_Charries AS STRING
 Dim i AS INTEGER
